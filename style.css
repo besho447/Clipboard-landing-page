@@ -1,0 +1,260 @@
+:root {
+    --heading-color: rgb(0 0 0 / 70%);
+    --paragraph-color: #808080;
+}
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+    color: var(--heading-color);
+    padding-top: 80px;
+    font-size: 30px;
+}
+.head-p {
+    text-align: center;
+    color: var(--paragraph-color);
+    margin: auto auto 30px;
+    max-width: 600px;
+    line-height: 1.8;
+}
+/* Small Devices */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium Devices */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large Devices */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* Start Header */
+header {
+    text-align: center;
+    padding-bottom: 50px;
+    position: relative;
+}
+header::before {
+    content: "";
+    z-index: -1;
+    content: "";
+    background-image: url(/images/bg-header-desktop.png);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 97%;
+    left: 0;
+}
+header .logo img {
+    padding-top: 40px;
+    display: block;
+    margin: auto auto 50px;
+}
+header h1 {
+    color: var(--heading-color);
+}
+header .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+    header .buttons {
+        display: grid;
+        gap: 20px;
+    }
+}
+header .buttons a {
+    color: white;
+    margin: 0 6px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+header .buttons .ios {
+background-color: hsl(171, 66%, 44%);
+}
+header .buttons .mac {
+    background-color: hsl(233, 100%, 69%);
+}
+/* End Header */
+/* Start Landing */
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 50px;
+}
+@media (max-width: 767px) {
+    section {
+        gap: 0;
+    }
+}
+section img {
+    width: 600px;
+    left: -90px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    section img {
+        width: 100%;
+        left: 0;
+    }
+}
+section h3 {
+    color: var(--heading-color);
+}
+section p {
+    color: var(--paragraph-color);
+    margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+    section h3,
+    section p {
+        text-align: center;
+    }
+}
+/* End Landing */
+/* Start Services */
+.container .img {
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 767px) {
+    .container .img img {
+        width: 100%;
+    }
+}
+/* End Services */
+/* Start Features */
+.container .feat {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    text-align: center;
+    align-items: baseline;
+}
+.container .feat img {
+    display: block;
+    margin: 25px auto;
+}
+.container .feat span {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+.container .feat p {
+    line-height: 1.8;
+    color: var(--paragraph-color);
+}
+/* End Features */
+/* Start Brands */
+.container .brands {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 35px;
+    align-items: center;
+    text-align: center;
+}
+/* End Brands */
+/* Start Downloads */
+.download {
+    padding-bottom: 70px;
+}
+.container .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.container .buttons a {
+    color: white;
+    margin: 0 6px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.container .buttons .ios {
+background-color: hsl(171, 66%, 44%);
+}
+.container .buttons .mac {
+    background-color: hsl(233, 100%, 69%);
+}
+/* End Downloads */
+/* Start Footer */
+footer {
+    background-color: #eee;
+    padding: 20px;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .footer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.container .footer .logo img {
+    width: 100px;
+}
+.container .footer span {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+.container .footer div span:last-child:not(.install) {
+    margin-top: 18px;
+}
+@media (max-width: 767px) {
+    .container .footer,
+    footer .container {
+        display: grid;
+        text-align: center;
+        justify-content: center;
+    }
+    .container .social {
+        display: flex;
+        gap: 30px;
+        padding-top: 30px;
+    }
+}
+/* End Footer */
